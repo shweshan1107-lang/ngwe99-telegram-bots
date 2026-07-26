@@ -1,0 +1,17 @@
+{
+  "name": "ngwe99-telegram-multi-bot",
+  "version": "11.0.0",
+  "private": true,
+  "description": "Ngwe99 Main, Daily Bonus and Coupon Telegram bots for Render Background Worker",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "check": "node --check bot.js"
+  },
+  "engines": {
+    "node": ">=20 <23"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3"
+  }
+}

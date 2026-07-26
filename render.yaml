@@ -1,0 +1,38 @@
+services:
+  - type: worker
+    name: ngwe99-telegram-bots
+    runtime: node
+    plan: starter
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeployTrigger: commit
+    disk:
+      name: ngwe99-bot-data
+      mountPath: /opt/render/project/src/storage
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /opt/render/project/src/storage
+      - key: MAIN_BOT_TOKEN
+        sync: false
+      - key: PROMOTION_BOT_TOKEN
+        sync: false
+      - key: COUPON_BOT_TOKEN
+        sync: false
+      - key: CHANNEL_URL
+        sync: false
+      - key: EVENTS_CHANNEL_URL
+        sync: false
+      - key: GAME_URL
+        sync: false
+      - key: ADMIN_CONTACT_URL
+        sync: false
+      - key: BOT_TITLE
+        value: Ngwe99
+      - key: PHOTO_SETUP_PASSWORD
+        sync: false
+      - key: COUPON_SETUP_PASSWORD
+        sync: false
+      - key: COUPON_TIMEZONE
+        value: Asia/Bangkok
