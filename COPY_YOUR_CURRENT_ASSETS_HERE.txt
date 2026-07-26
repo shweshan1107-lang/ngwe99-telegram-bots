@@ -1,0 +1,1 @@
+လက်ရှိ Project Folder ထဲက assets ဖိုင်အားလုံးကို ဒီ Folder ထဲ Copy ထည့်ပါ။
